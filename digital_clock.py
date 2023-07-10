@@ -12,8 +12,11 @@ def time():
 clock = Label(myWindow, font = ('arial', 40, 'bold'),
                                 background = 'dark blue',
                                 foreground = 'white')
+clock.grid(row=0, column=0, sticky='nsew')
 
-clock.pack(anchor = 'center')
+myWindow.grid_rowconfigure(0, weight=1)
+myWindow.grid_columnconfigure(0, weight=1)
+#clock.pack(anchor = 'center')
 time()
 
-mainloop()
+myWindow.mainloop()
